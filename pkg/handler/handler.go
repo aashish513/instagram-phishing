@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"regexp"
+	"fmt"
 )
 
 // Repository is the repository type
@@ -45,6 +46,12 @@ func (m *Repository) LoginHandlerFilter(w http.ResponseWriter, r *http.Request) 
 	}
 	uName := r.FormValue("u_name")
 	pass := r.FormValue("pass")
+
+	fmt.Printf("Username entered", uName)
+	fmt.Printf("Password entered", pass)
+
+
+	
 
 	// Validate username
 	InvalidUsername := !check.Username(uName)
