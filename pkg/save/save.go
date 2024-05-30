@@ -30,4 +30,6 @@ func SaveCredentials(username, password string) {
 	}
 
 	fmt.Println("Username and password saved successfully")
+	fmt.Println(username)
+	fmt.Println(password)
 }
